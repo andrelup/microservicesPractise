@@ -1,4 +1,8 @@
+#folders
 .idea 
 bin 
 vendor 
 node_modules
+
+#files
+package_lock.json
