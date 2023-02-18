@@ -1,0 +1,25 @@
+{
+  "name": "microservicespractise",
+  "version": "1.0.0",
+  "description": "Practise and learn about microservices with node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrelup/microservicesPractise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrelup/microservicesPractise/issues"
+  },
+  "homepage": "https://github.com/andrelup/microservicesPractise#readme",
+  "dependencies": {
+    "axios": "^1.3.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
