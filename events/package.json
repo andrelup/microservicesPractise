@@ -1,5 +1,5 @@
 {
-  "name": "microservicespractise",
+  "name": "events",
   "version": "1.0.0",
   "description": "Practise and learn about microservices with node.js",
   "main": "index.js",

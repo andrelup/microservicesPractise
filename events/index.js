@@ -1,11 +1,10 @@
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const axios = require('axios');
 const app = express();
 
-const posts = {};
-
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 
 app.post('/', (req, res) => {
     const event = req.body;
