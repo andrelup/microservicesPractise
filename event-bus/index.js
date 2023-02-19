@@ -9,7 +9,6 @@ const events = [];
 
 app.post("/events", (req, res) => {
   const event = req.body;
-  console.log(event);
 
   events.push(event);
 
@@ -28,7 +27,7 @@ app.post("/events", (req, res) => {
   res.send({ status: "OK" });
 });
 
-app.get("/get", (req, res) => {
+app.get("/events", (req, res) => {
   res.send(events);
 });
 
