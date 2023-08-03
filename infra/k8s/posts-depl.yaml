@@ -1,17 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
+# metadata is data about the object that is not used by the cluster itself but can be used by the users and by the kubernetes system components 
 metadata:
+  # name is the name of the deployement
   name: posts-depl
+# spec is the specification of the deployment
 spec:
+  # replicas is the number of pods that we want to run
   replicas: 1
+  # selector is used to tell the deployment which pods it should be watching
   selector:
+  # matchLabels is used to tell the deployment which pods it should be watching based on the labels
     matchLabels:
       app: posts
+  # template is the configuration of the pods that the deployment will create
   template:
     metadata:
+      # labels is used to tell the deployment which pods it should be watching based on the labels
+      # the labels here must match the labels in the selector
       labels:
+        # app is the label that we are using to identify the pods
         app: posts
+    # spec is the specification of the pods
     spec:
+      # containers is the list of containers that will be running in the pod
       containers:
         - name: posts
+          # image is the image that will be used to create the container
           image: andrelp/posts:latest
