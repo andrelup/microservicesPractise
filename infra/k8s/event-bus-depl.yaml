@@ -28,3 +28,16 @@ spec:
         - name: event-bus
           # image is the image that will be used to create the container
           image: andrelp/event-bus:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: event-bus-srv
+spec:
+  selector: 
+    app: event-bus
+  ports:
+    - name: event-bus
+      protocol: TCP
+      port: 4005
+      targetPort: 4005

@@ -28,3 +28,17 @@ spec:
         - name: posts
           # image is the image that will be used to create the container
           image: andrelp/posts:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-clusterip-srv
+spec:
+  # al junto con el fichero de deployment es considerado un servicio clusterip entonces no ponemos el selector type
+  selector: 
+    app: posts
+  ports:
+    - name: posts
+      protocol: TCP
+      port: 4000
+      targetPort: 4000
